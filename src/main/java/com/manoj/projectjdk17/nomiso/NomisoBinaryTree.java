@@ -93,6 +93,30 @@ public class NomisoBinaryTree {
         return root;
     }
 
+    private static Node createBinaryTree(String data){
+        String[] arr = data.split(",");
+        if(arr[0] == null){
+            return  null;
+        }
+        Node root = new Node(Integer.parseInt(arr[0]));
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        int i = 1;
+        while ( i < arr.length){
+            Node head = queue.poll();
+            if(!arr[i].equalsIgnoreCase("null")) {
+                head.left = new Node(Integer.parseInt(arr[i]));
+                queue.add(head.left);
+            }
+            i++;
+            if( i < arr.length && !arr[i].equalsIgnoreCase("null")) {
+                head.right = new Node(Integer.parseInt(arr[i]));
+                queue.add(head.right);
+            }
+            i++;
+        }
+        return root;
+    }
 
 //    insertInLeftRight(Node head, int left, int right){
 //        head.left = new Node(arr[i++]);
