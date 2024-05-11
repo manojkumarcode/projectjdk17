@@ -6,6 +6,9 @@ public class BinarySearchTree3 {
         int[] arr = {10, 5, 2, 5, 6, 4, 20, 30, 15};
         Node root = createBST(arr);
         traverse(root);
+        System.out.println("Integer.MIN_VALUE:" + Integer.MIN_VALUE);
+        System.out.println("Integer.MAX_VALUE:" + Integer.MAX_VALUE);
+        System.out.println(IfTreeIsBST.isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
         LevelOrderTraversal.traverse(root);
 
     }

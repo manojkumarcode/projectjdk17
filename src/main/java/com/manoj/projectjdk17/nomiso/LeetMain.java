@@ -10,6 +10,7 @@ public class LeetMain {
         node.right =new TreeNode(3);
         node.right.left =new TreeNode(4);
         node.right.right =new TreeNode(5);
+        System.out.println("IfTreeIsBST.isBST - " + IfTreeIsBST.isBST(node, Integer.MIN_VALUE, Integer.MAX_VALUE));
         Codec ser = new Codec();
         Codec deser = new Codec();
         TreeNode ans = deser.deserialize(ser.serialize(node));
