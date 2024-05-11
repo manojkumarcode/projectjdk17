@@ -10,7 +10,7 @@ public class SmallestElementInArray {
     }
 
     private static void findSmallestInArray(int[] arr) {
-        int smallest = Integer.MAX_VALUE;
+        int smallest = arr[0];
         for(int num : arr){
             if(num < smallest){
                 smallest = num;
