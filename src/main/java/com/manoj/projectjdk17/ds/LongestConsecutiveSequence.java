@@ -1,5 +1,7 @@
 package com.manoj.projectjdk17.ds;
 
+import io.cucumber.messages.types.FeatureChild;
+
 import java.util.HashSet;
 
 public class LongestConsecutiveSequence {
@@ -20,8 +22,9 @@ public class LongestConsecutiveSequence {
         }
         int longestStreak = 0;
 
-        for (int num : numHashSet) {
-            while (!numHashSet.contains(num - 1)) // only start counting if num is the start of sequence
+        for(int num : numHashSet) {
+            System.out.println("Current number: " + num);
+            if (!numHashSet.contains(num - 1)) // only start counting if num is the start of sequence
             {
                 int currentNum = num;
                 int currentSteak = 1;
@@ -30,7 +33,7 @@ public class LongestConsecutiveSequence {
                     currentSteak = currentSteak + 1;
                 }
 
-                longestStreak = Math.max(currentNum, longestStreak);
+                longestStreak = Math.max(currentSteak, longestStreak);
             }
         }
 
