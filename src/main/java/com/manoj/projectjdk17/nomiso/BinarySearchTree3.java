@@ -13,7 +13,7 @@ public class BinarySearchTree3 {
 
     }
 
-    private static Node createBST(int[] arr) {
+    public static Node createBST(int[] arr) {
         Node root = null;
         for (int i = 0; i < arr.length; i++) {
             int num = arr[i];
