@@ -1,10 +1,10 @@
 package com.manoj.projectjdk17.ds;
 
-public class LongestConsecutiveSubsequence {
+public class LongestConsecutiveSequenceOrdered {
 
     public static void main(String[] args) {
         int arr[] = {4, 7, 1, 2 , 8,10,3};
-        //findConsecutiveSequence(arr);
+        findConsecutiveSequence(arr);
         int[] arr2 = {4,9,8,1,2,3,4,5,9,3,4,5,6,7,8,9,10,1,2,3};
         findConsecutiveSequence(arr2);
     }
@@ -18,7 +18,7 @@ public class LongestConsecutiveSubsequence {
 
         for (int i = 0; i < arr.length; i++) {
 
-            int count = 0;
+            int count = 1;
             int startIndex = i;
 
             while ( (i+1) < arr.length && (arr[i+1] - arr[i]) == 1 ){
