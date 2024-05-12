@@ -1,4 +1,4 @@
-package com.manoj.projectjdk17.ds.Arrays;
+package com.manoj.projectjdk17.ds.arrays;
 
 public class SmallestElementInArray {
 
