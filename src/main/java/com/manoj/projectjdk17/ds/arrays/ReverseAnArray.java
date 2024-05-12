@@ -1,7 +1,5 @@
 package com.manoj.projectjdk17.ds.arrays;
 
-import static com.manoj.projectjdk17.ds.arrays.ArrayUtils.printArray;
-
 public class ReverseAnArray {
     public static void main(String[] args) {
         int[] arr1 = {1, 8, 5, 3, 2};
@@ -24,6 +22,13 @@ public class ReverseAnArray {
                 arr[i] = temp;
             }
             j--;
+        }
+    }
+
+    static void printArray(int[] arr) {
+        System.out.println();
+        for (int item : arr) {
+            System.out.print(item + " ");
         }
     }
 }
