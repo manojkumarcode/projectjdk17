@@ -18,7 +18,7 @@ public class PushAllZerosToEndOfArray {
                 int temp = arr[j];
                 arr[j] = arr[i];
                 arr[i] = temp;
-                j++;
+                j++;  // value of j only get increment when arr[i] element is non-zero
             }
         }
     }
