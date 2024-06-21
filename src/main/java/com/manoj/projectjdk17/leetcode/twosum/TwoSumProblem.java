@@ -19,7 +19,7 @@ public class TwoSumProblem {
     }
 
 
-    public int[] two_pass_hash_table_approch(int[] arr, int target){
+    public int[] two_pass_hash_table_approach(int[] arr, int target){
 
         HashMap<Integer, Integer> map = new HashMap();
 
@@ -37,10 +37,6 @@ public class TwoSumProblem {
                 return new int[] {i,j};
             }
         }
-
-
-
-
         return new int[]{0, 0};
     }
 
