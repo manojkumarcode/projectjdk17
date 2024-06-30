@@ -16,4 +16,13 @@ public class DefineGraph {
         map.put(6, List.of(2, 3, 5));
         return map;
     }
+
+    public static void printVisitedArray(int[] visited) {
+        System.out.print("Visited array:  ");
+        for (int i = 0; i < visited.length ; i++) {
+            System.out.print(i + ":" + visited[i] + ", ");
+        }
+        System.out.println();
+    }
+
 }

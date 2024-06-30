@@ -5,11 +5,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import static com.manoj.projectjdk17.ds.graphs.DefineGraph.getGraph;
+import static com.manoj.projectjdk17.ds.graphs.DefineGraph.printVisitedArray;
+
 public class BFSTraversal {
 
     public static void main(String[] args) {
         // get the graph in hashmap presentation
-        HashMap<Integer, List<Integer>> graph = DefineGraph.getGraph();
+        HashMap<Integer, List<Integer>> graph = getGraph();
 
         // source is nothing but from where we start the navigation
         (new BFSTraversal()).breadthFirstSearch(graph, 0, 7);
@@ -24,30 +27,25 @@ public class BFSTraversal {
         Queue queue = new LinkedList();
         queue.add(source);
         visited[source] = 1;
-        System.out.print(source + ",");
         while (!queue.isEmpty()){
             int current = (int) queue.poll();
+            //once we poll out we need to print the traversed element
+            System.out.print(current + ", ");
             List<Integer> adjacents = graph.get(current);
             for(int node: adjacents){
                 if(visited[node] == 0) {
                     queue.add(node);
                     visited[node] = 1;
-                    System.out.print(node + ",");
                 }
             }  // All the adjacent nodes visited
 
-        }
-
-
-    }
-
-    private static void printVisitedArray(int[] visited) {
-        System.out.print("Visited array:  ");
-        for (int i = 0; i < visited.length ; i++) {
-            System.out.print(i + ":" + visited[i] + ", ");
-        }
+        } // queue loop ends here
         System.out.println();
+        printVisitedArray(visited);
+
+
     }
+
 
 
 }
