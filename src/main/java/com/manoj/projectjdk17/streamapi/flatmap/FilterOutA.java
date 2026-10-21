@@ -6,6 +6,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /*
+
+
 we want to filter out the a and print out all the characters.
  */
 public class FilterOutA {
